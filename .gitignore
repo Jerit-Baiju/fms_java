@@ -1,0 +1,32 @@
+# ======== Java / Build artifacts ========
+*.class
+*.jar
+*.war
+*.ear
+*.nar
+*.rar
+*.sar
+*.zip
+
+# ======== Build directories ========
+/target/
+/out/
+/build/
+/bin/
+
+# ======== IDEs ========
+
+# VS Code
+.vscode/
+.history/
+
+# IntelliJ IDEA (in case you ever open it there)
+.idea/
+*.iml
+
+# Eclipse
+.classpath
+.project
+.settings/
+
+#
