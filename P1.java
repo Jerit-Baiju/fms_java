@@ -290,7 +290,7 @@ public class P1 extends JFrame {
             String description = (String) tableModel.getValueAt(rowIndex, 2);
             
             String deleteSQL = "DELETE FROM transactions WHERE id = (" +
-                "SELECT id FROM transactions WHERE date = ? AND description = ? LIMIT 1)";
+                "SELECT id FROM (SELECT id FROM transactions WHERE date = ? AND description = ? LIMIT 1) AS temp)";
             PreparedStatement pstmt = connection.prepareStatement(deleteSQL);
             pstmt.setString(1, date);
             pstmt.setString(2, description);
